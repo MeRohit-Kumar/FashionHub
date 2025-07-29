@@ -28,7 +28,7 @@ Responsive design for desktop and mobile devices
 🚀 Getting Started Locally
 
 1:Clone the repository:
-git clone https://github.com/your-username/fashion-hub.git
+git clone https://github.com/MeRohit-Kumar/FashionHub.git
 
 2:Navigate to the project folder:
 cd ecommerce
