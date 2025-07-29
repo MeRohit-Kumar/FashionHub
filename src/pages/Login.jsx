@@ -44,16 +44,7 @@ const Login = () => {
 
   return (
     <div
-      style={{
-        backgroundImage: "url('https://img.freepik.com/premium-photo/abstract-technological-hexagonal-background-digital-technology-network-background-illustration-futuristic-point-wave_1715-4816.jpg?w=1060')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
+      style={{backgroundImage: "url('https://img.freepik.com/premium-photo/abstract-technological-hexagonal-background-digital-technology-network-background-illustration-futuristic-point-wave_1715-4816.jpg?w=1060')",backgroundSize: 'cover',backgroundPosition: 'center',height: '100vh',display: 'flex',justifyContent: 'center',alignItems: 'center',}} >
       <Form
         onSubmit={handleSubmit}
         style={{
