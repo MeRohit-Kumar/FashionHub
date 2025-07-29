@@ -1,58 +1,71 @@
-🛍️ Fashion Hub - Frontend E-commerce Web App
-Fashion Hub is a responsive and user-friendly frontend e-commerce web application built using React. It allows users to browse a wide range of fashion products, view detailed product pages, and manage a shopping cart — all powered by data fetched from a dummy API.
+# 🛍️ Fashion Hub - Frontend E-commerce Web App
 
-🔧 Tech Stack
-Frontend: React, Redux (for state management)
+**Fashion Hub** is a responsive and dynamic e-commerce frontend application built with **React**. It fetches product data from a public API and provides users with a modern shopping experience, including product browsing, detailed views, cart functionality, and more.
 
-Styling: Bootstrap, React Icons
+---
 
-Data Fetching: Axios
+## 🚀 Features
 
-**API**: Dummy product API ( https://api.escuelajs.co)
+- 🛒 Product listing from external API
+- 🔍 Product detail view
+- ➕ Add to Cart / ➖ Remove from Cart
+- 🔄 Update item quantity in cart
+- 💰 Total cart calculation
+- 📱 Fully responsive design
+- 🔎 Product search and filtering
 
-✨ Features
-Product listing with real-time API data
+---
 
-Product detail view
+## 🔧 Tech Stack
 
-Add to Cart / Remove from Cart
+- **React** (Frontend Framework)
+- **Redux** (State Management)
+- **Bootstrap / React-Bootstrap** (Styling)
+- **Axios** (API Requests)
+- **React Icons** (UI Enhancements)
+- **Dummy API**: [EscuelaJS API](https://api.escuelajs.co)
 
-Update cart item quantity
+---
 
-Cart summary with total calculation
+## 📂 Folder Structure
+src/
+├── components/
+│ ├── Header.jsx
+│ ├── ProductList.jsx
+│ ├── ProductDetail.jsx
+│ ├── Cart.jsx
+├── redux/
+│ ├── store.js
+│ └── cartSlice.js
+├── App.jsx
+├── index.js
+└── ...
 
-Product filtering and search functionality
 
-Responsive design for desktop and mobile devices
+---
 
-🚀 Getting Started Locally
+## 🛠️ Installation & Setup
 
-1:Clone the repository:
+# Clone the repository
 git clone https://github.com/MeRohit-Kumar/FashionHub.git
 
-2:Navigate to the project folder:
-cd ecommerce
+# Go into the project directory
+cd FashionHub
 
-3:Install dependencies:
+# Install dependencies
 npm install
 
-4:Start the development server:
+# Start the development server
 npm run dev
 
-5:Additional modules
-you need to install bootstrap-icons,react-icons ,react-toastify,react-bootsrap to proper functionality of the page.
-
-📦 This project does not include any backend or database. All product data is fetched from an open API.
+Now open your browser at http://localhost:5173 (or wherever Vite shows the server).
 
 📷 Screenshots
-#HomePage
-<img width="1914" height="887" alt="Screenshot 2025-07-29 152136" src="https://github.com/user-attachments/assets/daec3131-90eb-4cb1-81b7-a09db1141abf" />
-#ProoductDetails
-<img width="1912" height="897" alt="Screenshot 2025-07-29 152206" src="https://github.com/user-attachments/assets/2a6eae3f-836b-41c7-8c9c-756324944dff" />
-#CartPage
-<img width="1919" height="881" alt="Screenshot 2025-07-29 152322" src="https://github.com/user-attachments/assets/a6c70134-321f-4865-a445-2b1e3d3477cb" />
+<img width="1914" height="887" alt="Screenshot 2025-07-29 152136" src="https://github.com/user-attachments/assets/197516a9-3891-4c02-8c8e-a91c5a623a75" />
+<img width="1912" height="897" alt="Screenshot 2025-07-29 152206" src="https://github.com/user-attachments/assets/5f300609-d908-47cd-bcaa-71eb838d741f" />
+<img width="1919" height="881" alt="Screenshot 2025-07-29 152322" src="https://github.com/user-attachments/assets/4a18f9fd-a958-47f2-bcec-f78bda2fe362" />
 
-📄 License
+📝 License
 This project is licensed under the MIT License.
 
 
