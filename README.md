@@ -1,12 +1,55 @@
-# React + Vite
+🛍️ Fashion Hub - Frontend E-commerce Web App
+Fashion Hub is a responsive and user-friendly frontend e-commerce web application built using React. It allows users to browse a wide range of fashion products, view detailed product pages, and manage a shopping cart — all powered by data fetched from a dummy API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔧 Tech Stack
+Frontend: React, Redux (for state management)
 
-Currently, two official plugins are available:
+Styling: Bootstrap, React Icons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Data Fetching: Axios
 
-## Expanding the ESLint configuration
+**API**: Dummy product API ( https://api.escuelajs.co)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✨ Features
+Product listing with real-time API data
+
+Product detail view
+
+Add to Cart / Remove from Cart
+
+Update cart item quantity
+
+Cart summary with total calculation
+
+Product filtering and search functionality
+
+Responsive design for desktop and mobile devices
+
+🚀 Getting Started Locally
+
+1:Clone the repository:
+git clone https://github.com/MeRohit-Kumar/FashionHub.git
+
+2:Navigate to the project folder:
+cd ecommerce
+
+3:Install dependencies:
+npm install
+
+4:Start the development server:
+npm run dev
+
+📦 This project does not include any backend or database. All product data is fetched from an open API.
+
+📷 Screenshots
+#HomePage
+<img width="1914" height="887" alt="Screenshot 2025-07-29 152136" src="https://github.com/user-attachments/assets/daec3131-90eb-4cb1-81b7-a09db1141abf" />
+#ProoductDetails
+<img width="1912" height="897" alt="Screenshot 2025-07-29 152206" src="https://github.com/user-attachments/assets/2a6eae3f-836b-41c7-8c9c-756324944dff" />
+#CartPage
+<img width="1919" height="881" alt="Screenshot 2025-07-29 152322" src="https://github.com/user-attachments/assets/a6c70134-321f-4865-a445-2b1e3d3477cb" />
+
+📄 License
+This project is licensed under the MIT License.
+
+
