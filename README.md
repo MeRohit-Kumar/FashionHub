@@ -39,6 +39,9 @@ npm install
 4:Start the development server:
 npm run dev
 
+5:Additional modules
+you need to install bootstrap-icons,react-icons ,react-toastify,react-bootsrap to proper functionality of the page.
+
 📦 This project does not include any backend or database. All product data is fetched from an open API.
 
 📷 Screenshots
