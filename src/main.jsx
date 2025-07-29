@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
 import './index.css';
+import App from './App';
+import ReactDOM from 'react-dom/client';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import { Provider } from 'react-redux';
 import { store } from './redux/Store';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { SidebarProvider } from './context/sidebarContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
