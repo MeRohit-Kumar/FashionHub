@@ -51,7 +51,7 @@ const Login = () => {
       style={{backgroundImage: "url('https://img.freepik.com/premium-photo/abstract-technological-hexagonal-background-digital-technology-network-background-illustration-futuristic-point-wave_1715-4816.jpg?w=1060')",backgroundSize: 'cover',backgroundPosition: 'center',height: '100vh',display: 'flex',justifyContent: 'center',alignItems: 'center',}} >
       <Form
         onSubmit={handleSubmit}
-        style={{background: 'rgba(255,255,255,0.1)',backdropFilter: 'blur(12px)',WebkitBackdropFilter: 'blur(12px)',padding: '30px',borderRadius: '15px',width: '100%',maxWidth: '380px',color: '#fff',}} >
+        style={{background: 'rgba(7, 151, 154, 0.1)',backdropFilter: 'blur(10px)',WebkitBackdropFilter: 'blur(20px)',padding: '30px',borderRadius: '25px',width: '100%',maxWidth: '380px',color: '#fff',}} >
         <h3 className="text-center mb-4" style={{ color: '#fff' }}>Login</h3>
         <Form.Group className="mb-3" controlId="formEmail">
           <Form.Label style={{ color: '#fff' }}>Email</Form.Label>

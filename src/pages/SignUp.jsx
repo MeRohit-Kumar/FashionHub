@@ -65,10 +65,10 @@ const SignUp = () => {
       <Form
         onSubmit={handleSubmit}
         style={{
-          background: 'rgba(255,255,255,0.1)',
-          backdropFilter: 'blur(12px)',
+          background: 'rgba(10, 151, 179, 0.1)',
+          backdropFilter: 'blur(10px)',
           padding: '30px',
-          borderRadius: '15px',
+          borderRadius: '25px',
           width: '100%',
           maxWidth: '380px',
           color: '#fff',
@@ -141,7 +141,6 @@ const SignUp = () => {
           Sign Up
         </Button>
 
-        {/* Already have an account? */}
         <div className="mt-3 text-center">
           <span>Already have an account? </span>
           <Link to="/login" className="text-info" style={{ textDecoration: 'underline' }}>
