@@ -31,12 +31,18 @@ const Home = () => {
     .filter(product => product.title.toLowerCase().includes(searchTerm.toLowerCase()))
     .filter(product => selectedCategory === 'All' || product.category?.name === selectedCategory);
 
-  const sortedItems = [...filteredItems].sort((a, b) => {
-    if (sortType === 'price-asc') return a.price - b.price;
-    if (sortType === 'price-desc') return b.price - a.price;
-    if (sortType === 'name') return a.title.localeCompare(b.title);
-    return 0;
-  });
+  const sortedItems = [...filteredItems].filter(product => {
+  if (sortType.startsWith('range-')) {
+    const [min, max] = sortType.replace('range-', '').split('-').map(Number);
+    return product.price >= min && product.price <= max;
+  }
+  return true;
+ }).sort((a, b) => {
+  if (sortType === 'price-asc') return a.price - b.price;
+  if (sortType === 'price-desc') return b.price - a.price;
+  if (sortType === 'name') return a.title.localeCompare(b.title);
+  return 0;
+});
 
   return (
     <div className="container mt-4">
@@ -62,11 +68,19 @@ const Home = () => {
         </div>
 
         <div className="col-md-4 mb-2">
-          <select className="form-select" value={sortType} onChange={(e) => setSortType(e.target.value)}>
+          <select
+            className="form-select"
+            value={sortType}
+            onChange={(e) => setSortType(e.target.value)}
+          >
             <option value="">Sort By</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="price-desc">Price: High to Low</option>
-            <option value="name">a-z</option>
+            <option value="name">Alphabetical (A-Z)</option>
+            <option value="range-0-20">Price: ₹0 - ₹20</option>
+            <option value="range-20-50">Price: ₹20 - ₹50</option>
+            <option value="range-50-100">Price: ₹50 - ₹100</option>
+            <option value="range-100-10000">Price: ₹100 - ₹10000</option>
           </select>
         </div>
       </div>

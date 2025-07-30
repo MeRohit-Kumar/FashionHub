@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -14,7 +14,7 @@ const SignUp = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
@@ -40,7 +40,7 @@ const SignUp = () => {
       setErrors({});
 
       setTimeout(() => {
-        navigate('/login'); 
+        navigate('/login');
       }, 1000);
     } else {
       toast.error('Please fix the errors above.');
@@ -76,7 +76,6 @@ const SignUp = () => {
       >
         <h3 className="text-center mb-4">Sign Up</h3>
 
-        
         <Form.Group className="mb-3" controlId="formName">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -89,7 +88,6 @@ const SignUp = () => {
           <Form.Control.Feedback type="invalid">{errors.name}</Form.Control.Feedback>
         </Form.Group>
 
-    
         <Form.Group className="mb-3" controlId="formEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
@@ -102,7 +100,6 @@ const SignUp = () => {
           <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
         </Form.Group>
 
-     
         <Form.Group className="mb-3" controlId="formPassword" style={{ position: 'relative' }}>
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -128,7 +125,6 @@ const SignUp = () => {
           <Form.Control.Feedback type="invalid">{errors.password}</Form.Control.Feedback>
         </Form.Group>
 
-       
         <Form.Group className="mb-3" controlId="formConfirmPassword">
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
@@ -144,6 +140,14 @@ const SignUp = () => {
         <Button variant="success" type="submit" className="w-100 mt-2">
           Sign Up
         </Button>
+
+        {/* Already have an account? */}
+        <div className="mt-3 text-center">
+          <span>Already have an account? </span>
+          <Link to="/login" className="text-info" style={{ textDecoration: 'underline' }}>
+            Login
+          </Link>
+        </div>
       </Form>
     </div>
   );

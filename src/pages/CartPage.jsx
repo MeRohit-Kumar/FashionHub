@@ -6,6 +6,8 @@ import {
   incrementQty,
   decrementQty,
 } from "../redux/slices/CartSlice";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -57,13 +59,23 @@ const CartPage = () => {
 
                 <div className="btn-group">
                   <button
-                    onClick={() => dispatch(decrementQty(item.id))}
+                    onClick={() => {
+                      dispatch(decrementQty(item.id));
+                      toast.info(`Decreased quantity of ${item.title}`, {
+                        autoClose: 1000,
+                      });
+                    }}
                     className="btn btn-sm btn-danger"
                   >
                     -
                   </button>
                   <button
-                    onClick={() => dispatch(incrementQty(item.id))}
+                    onClick={() => {
+                      dispatch(incrementQty(item.id));
+                      toast.success(`Increased quantity of ${item.title}`, {
+                        autoClose: 1000,
+                      });
+                    }}
                     className="btn btn-sm btn-warning"
                   >
                     +
@@ -71,7 +83,12 @@ const CartPage = () => {
                 </div>
 
                 <button
-                  onClick={() => dispatch(removeFromCart(item.id))}
+                  onClick={() => {
+                    dispatch(removeFromCart(item.id));
+                    toast.error(`${item.title} removed from cart`, {
+                      autoClose: 1000,
+                    });
+                  }}
                   className="btn btn-sm btn-danger"
                 >
                   <i className="bi bi-trash"></i> Remove

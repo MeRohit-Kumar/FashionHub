@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -15,12 +15,12 @@ const Login = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(form.email)) {
-      newErrors.email = 'Only @gmail.com emails are allowed';
+    if (!/^[admin]+@gmail\.com$/.test(form.email)) {
+      newErrors.email = 'Only admin@gmail.com are allowed';
     }
 
-    if (form.password.length < 8) {
-      newErrors.password = 'Password must be at least 8 characters';
+    if (form.password.length <8) {
+      newErrors.password = 'Password must be exactly 8 characters';
     }
 
     setErrors(newErrors);
@@ -28,19 +28,23 @@ const Login = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (validateForm()) {
+  if (validateForm()) {
+    if (form.email === 'admin@gmail.com' && form.password === '12345678') {
+      localStorage.setItem('isLoggedIn', 'true');
       toast.success('Login successful!');
       setForm({ email: '', password: '' });
       setErrors({});
+
       setTimeout(() => {
-        navigate('/'); 
-      },1000);
+        navigate('/');
+      }, 1000);
     } else {
-      toast.error('Please fix the errors above.');
+      toast.error('Invalid email or password');
     }
-  };
+  }
+};
 
   return (
     <div
@@ -82,6 +86,12 @@ const Login = () => {
         <Button variant="primary" type="submit" className="w-100 mt-2">
           Login
         </Button>
+        <div className="text-center mt-3" style={{ color: '#fff' }}>
+          Don't have an account?{' '}
+          <Link to="/signup" style={{ color: '#0d6efd', textDecoration: 'underline' }}>
+            Sign up
+          </Link>
+        </div>
       </Form>
     </div>
   );
