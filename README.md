@@ -13,6 +13,7 @@
 - 💰 Total cart calculation
 - 📱 Fully responsive design
 - 🔎 Product search and filtering
+- 🌙 Added functionality to change Theme from dark to light.
 
 ---
 
@@ -28,10 +29,11 @@
 ---
 
 ## 📂 Folder Structure
+
 src/
-├── components/
+├── components/                                                            
 │ ├── Header.jsx
-│ ├── ProductList.jsx
+│ ├── ProductList.jsx                     
 │ ├── ProductDetail.jsx
 │ ├── Cart.jsx
 ├── redux/
