@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  // Check login status 
+  const { theme, toggleTheme } = useTheme();
+  
   useEffect(() => {
     const status = localStorage.getItem('isLoggedIn') === 'true';
     setIsLoggedIn(status);
@@ -30,7 +31,14 @@ const Navbar = () => {
           Fashion Hub
         </NavLink>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div style={{ display:'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <button
+            onClick={toggleTheme}
+            className="btn btn-sm btn-outline-light"
+            title="Toggle Theme"
+          >
+            <i className={`bi ${theme === 'dark' ? 'bi-sun' : 'bi-moon'}`}></i>
+          </button>
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -48,7 +56,6 @@ const Navbar = () => {
           >
             <i className="bi bi-cart"></i> Cart ({cartItems.length})
           </NavLink>
-
           {!isLoggedIn ? (
             <>
               <NavLink
@@ -72,7 +79,7 @@ const Navbar = () => {
           ) : (
             <div className="dropdown">
               <button
-                className="btn btn-outline-light btn-sm dropdown-toggle"
+                className="btn btn-outline-light btn-sm dropdown"
                 type="button"
                 id="profileDropdown"
                 data-bs-toggle="dropdown"
@@ -81,6 +88,11 @@ const Navbar = () => {
                 <i className="bi bi-person-circle me-1"></i> Profile
               </button>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li>
+                  <button className="dropdown-item" onClick={() => navigate('/profile')}>
+                    <i className="bi bi-person me-2"></i> View Profile
+                  </button>
+                </li>
                 <li>
                   <button className="dropdown-item" onClick={() => navigate('/settings')}>
                     <i className="bi bi-gear me-2"></i> Settings

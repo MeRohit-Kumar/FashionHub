@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Priya Sharma",
+    "email": "priya@example.com",
+    "contact": "9812345678",
+    "location": "Mumbai",
+    "role": "Frontend Developer",
+    "status": "Active",
+    "image": "profile1.jpeg",
+    "summary": "Creative frontend developer who loves designing beautiful user interfaces.",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Figma"],
+    "activities": ["Logged in", "Pushed new UI changes", "Fixed navbar bug"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "twitter": "#"
+    }
+  },
+  {
+    "name": "Prakash Kumar",
+    "email": "Prakash@example.com",
+    "contact": "9723456780",
+    "location": "Bihar",
+    "role": "UI/UX Designer",
+    "status": "Active",
+    "image": "profile3.jpeg",
+    "summary": "Detail-oriented UI/UX designer focused on creating seamless experiences.",
+    "skills": ["Figma", "Adobe XD", "Sketch", "HTML", "CSS"],
+    "activities": ["Logged out", "Updated design system", "Reviewed UI components"],
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "twitter": "#"
+    }
+  },
+{
+  "name": "Rohit Kumar",
+  "email": "rohit@example.com",
+  "contact": "9876543210",
+  "location": "Patna",
+  "role": "MERN Stack Developer",
+  "status": "Active",
+  "image": "profile2.jpeg",
+  "summary": "Passionate full-stack developer with 3+ years experience building scalable web apps.",
+  "skills": ["React", "Node.js", "MongoDB", "Bootstrap", "Redux"],
+  "activities": ["Logged in", "Updated project details", "Reviewed code on GitHub"],
+  "social": {
+    "linkedin": "#",
+    "github": "#",
+    "twitter": "#"
+  }
+},
+{
+  "name": "sunny Kumar",
+  "email": "sunny@example.com",
+  "contact": "9856543210",
+  "location": "Ranchi",
+  "role": "MEAN Stack Developer",
+  "status": "Active",
+  "image": "profile4.jpeg",
+  "summary": "Passionate full-stack developer with 3+ years experience building scalable web apps.",
+  "skills": ["Angular", "Next.js", "SQL", "Tailwind", "Redux"],
+  "activities": ["Fixed navbar bug", "Pushed new UI changes", "Reviewed code on GitHub"],
+  "social": {
+    "linkedin": "#",
+    "github": "#",
+    "twitter": "#"
+  }
+}
+]

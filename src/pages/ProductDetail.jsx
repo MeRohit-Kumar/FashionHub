@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/slices/CartSlice';
-import { toast } from 'react-toastify';
-import axios from '../services/axios';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/slices/CartSlice";
+import { toast } from "react-toastify";
+import axios from "../services/axios";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -17,7 +17,7 @@ const ProductDetail = () => {
         const res = await axios.get(`/products/${id}`);
         setProduct(res.data);
       } catch (err) {
-        console.error('Error fetching product:', err);
+        console.error("Error fetching product:", err);
       } finally {
         setLoading(false);
       }
@@ -29,13 +29,16 @@ const ProductDetail = () => {
   const handleAddToCart = () => {
     dispatch(addToCart(product));
     toast.success(`${product.title} added to cart`, {
-      position: 'top-right',
-      autoClose: 2000,
+      position: "top-right",
     });
   };
 
-  if (loading) return <div className="text-center mt-5">Loading product...</div>;
-  if (!product) return <div className="text-danger mt-5 text-center">Product not found.</div>;
+  if (loading)
+    return <div className="text-center mt-5">Loading product...</div>;
+  if (!product)
+    return (
+      <div className="text-danger mt-5 text-center">Product not found.</div>
+    );
 
   return (
     <div className="container mt-5">
@@ -45,7 +48,7 @@ const ProductDetail = () => {
             src={product.images?.[0]}
             alt={product.title}
             className="img-fluid rounded"
-            style={{ maxHeight: '400px', objectFit: 'cover' }}
+            style={{ maxHeight: "400px", objectFit: "cover" }}
           />
         </div>
         <div className="col-md-6">

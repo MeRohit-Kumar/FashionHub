@@ -1,13 +1,9 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import {
-  removeFromCart,
-  incrementQty,
-  decrementQty,
-} from "../redux/slices/CartSlice";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
+import {removeFromCart,incrementQty,decrementQty,} from "../redux/slices/CartSlice";
 
 const CartPage = () => {
   const dispatch = useDispatch();
