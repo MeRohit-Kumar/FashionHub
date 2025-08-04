@@ -65,8 +65,9 @@ Now open your browser at http://localhost:5173 (or wherever Vite shows the serve
 📷 Screenshots
 <img width="1892" height="835" alt="image" src="https://github.com/user-attachments/assets/79adec81-8432-4e44-bc8c-d94ec148b116" />
 
-<img width="1912" height="897" alt="Screenshot 2025-07-29 152206" src="https://github.com/user-attachments/assets/5f300609-d908-47cd-bcaa-71eb838d741f" />
-<img width="1919" height="881" alt="Screenshot 2025-07-29 152322" src="https://github.com/user-attachments/assets/4a18f9fd-a958-47f2-bcec-f78bda2fe362" />
+<img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/3c179aab-00db-46ee-a721-d8ab1b48285c" />
+
+<img width="1918" height="825" alt="image" src="https://github.com/user-attachments/assets/4cdac11b-0bcb-4059-a5c2-2da68f3d293e" />
 
 📝 License
 This project is licensed under the MIT License.
